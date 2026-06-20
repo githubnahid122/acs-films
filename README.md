@@ -3,6 +3,7 @@
 A production-ready React website inspired by mccc.in, built with modern tooling.
 
 ## Tech Stack
+
 - React 19 + Vite 8 + TypeScript
 - Tailwind CSS v4 (via @tailwindcss/vite)
 - React Router DOM v7
@@ -13,12 +14,21 @@ A production-ready React website inspired by mccc.in, built with modern tooling.
 ## Getting Started
 
 ```bash
-npm install
-npm run dev       # http://localhost:5173
-npm run build     # production build
+# Install dependencies
+yarn
+
+# Dev server
+yarn dev
+
+# Production build
+yarn build
+
+# Preview build
+yarn preview
 ```
 
 ## Design Tokens
+
 - Navy `#0F172A` — primary text/backgrounds
 - Violet `#7C3AED` — CTAs, accents
 - Coral `#FF5C35` — secondary actions
@@ -26,6 +36,7 @@ npm run build     # production build
 - Body Font: Inter
 
 ## Pages
+
 - `/` Home (Hero + About + Workshops + Programs + Gallery + Testimonials + Newsletter)
 - `/about` Founder, Vision/Mission, Timeline
 - `/our-work` Filterable film poster grid
@@ -37,5 +48,6 @@ npm run build     # production build
 - `*` Cinematic 404 page
 
 ## Connecting a Real API
+
 Replace mock data in `src/constants/mockData.ts` with Axios calls in `src/services/`.
 Use `useQuery` from TanStack Query in page components.
