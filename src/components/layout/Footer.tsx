@@ -25,7 +25,7 @@ export default function Footer() {
                 className="text-xl font-bold text-white"
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                MCCC
+                Acs Films
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-6 max-w-xs">

@@ -1,6 +1,4 @@
-# MCCC Inspired — Modern Casting Company Website
-
-A production-ready React website inspired by mccc.in, built with modern tooling.
+# Acs Films — Modern Casting Company Website
 
 ## Tech Stack
 

@@ -23,7 +23,7 @@ export default function OurWorkPage() {
     <>
       <PageHeader
         title="Our Work"
-        subtitle="From blockbuster films to acclaimed web series — discover the stories MCCC has helped tell."
+        subtitle="From blockbuster films to acclaimed web series — discover the stories Acs Films has helped tell."
         breadcrumbs={[{ label: 'Our Work' }]}
       />
 

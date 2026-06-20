@@ -5,18 +5,18 @@ import Timeline from '@/components/common/Timeline'
 import { TRANSITION_VARIANTS, STAGGER_CONTAINER } from '@/constants'
 
 const TIMELINE_ITEMS = [
-  { year: '2008', title: 'MCCC Founded', description: 'Mukesh Chhabra established MCCC with a singular vision to transform how talent is discovered in Indian cinema.' },
-  { year: '2010', title: 'First Bollywood Blockbuster', description: 'Cast the ensemble for a landmark Hindi film, marking MCCC\'s entry into mainstream Bollywood.' },
+  { year: '2008', title: 'Acs Films Founded', description: 'Mukesh Chhabra established Acs Films with a singular vision to transform how talent is discovered in Indian cinema.' },
+  { year: '2010', title: 'First Bollywood Blockbuster', description: 'Cast the ensemble for a landmark Hindi film, marking Acs Films entry into mainstream Bollywood.' },
   { year: '2013', title: 'The Lootera Era', description: 'Collaborated on critically acclaimed parallel cinema projects, building a reputation for nuanced casting.' },
-  { year: '2016', title: 'Dangal & Nationwide Discovery', description: 'The nationwide audition drive for Dangal put MCCC on a new map — discovering non-actors from small towns.' },
-  { year: '2019', title: 'Dil Bechara — Directorial Debut', description: 'Mukesh made his directorial debut, marking a milestone that brought new dimension to MCCC\'s identity.' },
+  { year: '2016', title: 'Dangal & Nationwide Discovery', description: 'The nationwide audition drive for Dangal put Acs Films on a new map — discovering non-actors from small towns.' },
+  { year: '2019', title: 'Dil Bechara — Directorial Debut', description: 'Mukesh made his directorial debut, marking a milestone that brought new dimension to Acs Films identity.' },
   { year: '2021', title: 'CSA Membership', description: 'Inducted into the Casting Society of America — only the second Indian company to receive this honour.' },
-  { year: '2024', title: 'Workshop Division Launch', description: 'Formally launched the MCCC Workshop Division, making our craft accessible to aspiring actors nationwide.' },
-  { year: '2026', title: '400+ Films & Counting', description: 'MCCC has now cast for over 400 feature films, 150+ web series, and 3000+ commercials.' },
+  { year: '2024', title: 'Workshop Division Launch', description: 'Formally launched the Acs Films Workshop Division, making our craft accessible to aspiring actors nationwide.' },
+  { year: '2026', title: '400+ Films & Counting', description: 'Acs Films has now cast for over 400 feature films, 150+ web series, and 3000+ commercials.' },
 ]
 
 const VALUES = [
-  { title: 'Our Vision', text: 'A world where raw talent — irrespective of background — has a clear, accessible path to the screen. MCCC exists to make that path real.', icon: '🔭' },
+  { title: 'Our Vision', text: 'A world where raw talent — irrespective of background — has a clear, accessible path to the screen. Acs Films exists to make that path real.', icon: '🔭' },
   { title: 'Our Mission', text: 'To discover, nurture, and champion exceptional performers across India. We connect talent with storytellers, and elevate the craft of casting as an art form.', icon: '🎯' },
   { title: 'Our Values', text: 'Authenticity over polish. Craft over celebrity. We believe in building careers that last, rooted in genuine talent and relentless training.', icon: '💎' },
 ]
@@ -25,7 +25,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About MCCC"
+        title="About Acs Films"
         subtitle="Fifteen years of discovering India's most compelling performers and shaping the stories that define a generation."
         breadcrumbs={[{ label: 'About' }]}
       />
@@ -46,8 +46,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-base text-slate-600 leading-relaxed"
           >
-            Mukesh Chhabra Casting Company (MCCC) strives to discover exceptional talents and
-            bring together the perfect cast for every project. Incepted in 2008, MCCC has evolved
+            Mukesh Chhabra Casting Company (Acs Films) strives to discover exceptional talents and
+            bring together the perfect cast for every project. Incepted in 2008, Acs Films has evolved
             into one of the finest casting companies catering to worldwide clientele. We've been the
             creative force behind Bollywood's biggest blockbusters, the most-streamed web series on
             OTT platforms, and some of the most talked-about commercial campaigns in the country.

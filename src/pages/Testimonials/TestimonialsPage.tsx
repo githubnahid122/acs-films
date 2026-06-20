@@ -10,7 +10,7 @@ export default function TestimonialsPage() {
     <>
       <PageHeader
         title="Testimonials"
-        subtitle="Stories from students and collaborators who've been part of the MCCC journey."
+        subtitle="Stories from students and collaborators who've been part of the Acs Films journey."
         breadcrumbs={[{ label: 'Testimonials' }]}
       />
 

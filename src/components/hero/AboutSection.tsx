@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
-import { TRANSITION_VARIANTS } from '@/constants'
-import Button from '@/components/common/Button'
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { CheckCircle2, ArrowRight } from "lucide-react";
+import { TRANSITION_VARIANTS } from "@/constants";
+import Button from "@/components/common/Button";
 
 const HIGHLIGHTS = [
-  'Leading Casting Company - one of India\'s finest since 2008',
-  'Talent Discovery - found stars like Rajkummar Rao, Mrunal Thakur',
-  'Industry Recognition - Member of the Casting Society of America',
-  '15+ Years Experience in movies, web series, and commercials',
-]
+  "Leading Casting Company - one of India's finest since 2008",
+  "Talent Discovery - found stars like Rajkummar Rao, Mrunal Thakur",
+  "Industry Recognition - Member of the Casting Society of America",
+  "15+ Years Experience in movies, web series, and commercials",
+];
 
 export default function AboutSection() {
   return (
@@ -20,7 +20,7 @@ export default function AboutSection() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, margin: "-80px" }}
             variants={TRANSITION_VARIANTS.slideLeft}
             transition={{ duration: 0.7 }}
             className="relative"
@@ -39,7 +39,9 @@ export default function AboutSection() {
                 >
                   Mukesh Chhabra
                 </p>
-                <p className="text-slate-300 text-sm mt-1">Casting Director · Director · Writer</p>
+                <p className="text-slate-300 text-sm mt-1">
+                  Casting Director · Director · Writer
+                </p>
               </div>
             </div>
 
@@ -56,7 +58,9 @@ export default function AboutSection() {
               >
                 15+
               </p>
-              <p className="text-sm text-violet-200 mt-1">Years of Excellence</p>
+              <p className="text-sm text-violet-200 mt-1">
+                Years of Excellence
+              </p>
             </motion.div>
 
             <div className="absolute -z-10 -top-6 -left-6 w-48 h-48 rounded-3xl bg-violet-50 rotate-6" />
@@ -66,14 +70,14 @@ export default function AboutSection() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, margin: "-80px" }}
             variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
           >
             <motion.span
               variants={TRANSITION_VARIANTS.fadeUp}
               className="text-xs font-semibold tracking-[0.2em] uppercase text-[#7C3AED]"
             >
-              About MCCC
+              About Acs Films
             </motion.span>
 
             <motion.h2
@@ -83,16 +87,17 @@ export default function AboutSection() {
             >
               Meet the Heart
               <br />
-              of MCCC
+              of Acs Films
             </motion.h2>
 
             <motion.p
               variants={TRANSITION_VARIANTS.fadeUp}
               className="text-base text-slate-600 leading-relaxed mb-4"
             >
-              Mukesh Chhabra is the driving force behind streamlining the casting process in the
-              Hindi Film Industry. After training for 2 years at Shri Ram Centre, he spent 9 years
-              acting and teaching with the Theatre in Education Company (TIE) affiliated with the
+              Mukesh Chhabra is the driving force behind streamlining the
+              casting process in the Hindi Film Industry. After training for 2
+              years at Shri Ram Centre, he spent 9 years acting and teaching
+              with the Theatre in Education Company (TIE) affiliated with the
               National School of Drama.
             </motion.p>
 
@@ -100,9 +105,10 @@ export default function AboutSection() {
               variants={TRANSITION_VARIANTS.fadeUp}
               className="text-base text-slate-600 leading-relaxed mb-8"
             >
-              Founded in 2008, MCCC has grown to become India's leading casting company, discovering
-              faces like Rajkummar Rao, Sushant Singh Rajput, Mrunal Thakur, Pratik Gandhi, Sanya
-              Malhotra, and Fatima Sana Shaikh.
+              Founded in 2008, Acs Films has grown to become India's leading
+              casting company, discovering faces like Rajkummar Rao, Sushant
+              Singh Rajput, Mrunal Thakur, Pratik Gandhi, Sanya Malhotra, and
+              Fatima Sana Shaikh.
             </motion.p>
 
             <motion.ul
@@ -110,18 +116,26 @@ export default function AboutSection() {
               className="space-y-3 mb-8"
             >
               {HIGHLIGHTS.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-sm text-slate-600"
+                >
                   <CheckCircle2 className="w-5 h-5 text-[#7C3AED] shrink-0 mt-0.5" />
                   {item}
                 </li>
               ))}
             </motion.ul>
 
-            <motion.div variants={TRANSITION_VARIANTS.fadeUp} className="flex items-center gap-4">
+            <motion.div
+              variants={TRANSITION_VARIANTS.fadeUp}
+              className="flex items-center gap-4"
+            >
               <Button
                 variant="primary"
                 size="md"
-                onClick={() => { window.location.href = '/about' }}
+                onClick={() => {
+                  window.location.href = "/about";
+                }}
               >
                 Our Full Story
                 <ArrowRight className="w-4 h-4" />
@@ -137,5 +151,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

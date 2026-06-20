@@ -1,37 +1,37 @@
-import { useState, useEffect } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Clapperboard } from 'lucide-react'
-import { cn } from '@/utils'
-import { NAV_LINKS } from '@/constants'
-import Button from '@/components/common/Button'
+import { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, Clapperboard } from "lucide-react";
+import { cn } from "@/utils";
+import { NAV_LINKS } from "@/constants";
+import Button from "@/components/common/Button";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const location = useLocation()
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   // Close mobile menu on route change
-  useEffect(() => setMobileOpen(false), [location])
+  useEffect(() => setMobileOpen(false), [location]);
 
   // Detect scroll
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', handler, { passive: true })
-    handler()
-    return () => window.removeEventListener('scroll', handler)
-  }, [])
+    const handler = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handler, { passive: true });
+    handler();
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
-  const isLight = !scrolled && !mobileOpen && location.pathname === '/'
+  const isLight = !scrolled && !mobileOpen && location.pathname === "/";
 
   return (
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled || mobileOpen
-            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100'
-            : 'bg-transparent'
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100"
+            : "bg-transparent"
         )}
       >
         <nav className="container mx-auto px-4 sm:px-6">
@@ -40,22 +40,29 @@ export default function Navbar() {
             <Link
               to="/"
               className="flex items-center gap-2 group"
-              aria-label="MCCC Home"
+              aria-label="Acs Home"
             >
-              <div className={cn(
-                'w-9 h-9 rounded-lg flex items-center justify-center transition-colors',
-                isLight ? 'bg-white/10' : 'bg-[#7C3AED]'
-              )}>
-                <Clapperboard className={cn('w-5 h-5', isLight ? 'text-white' : 'text-white')} />
+              <div
+                className={cn(
+                  "w-9 h-9 rounded-lg flex items-center justify-center transition-colors",
+                  isLight ? "bg-white/10" : "bg-[#7C3AED]"
+                )}
+              >
+                <Clapperboard
+                  className={cn(
+                    "w-5 h-5",
+                    isLight ? "text-white" : "text-white"
+                  )}
+                />
               </div>
               <span
                 className={cn(
-                  'text-xl font-bold tracking-tight transition-colors',
-                  isLight ? 'text-white' : 'text-[#0F172A]'
+                  "text-xl font-bold tracking-tight transition-colors",
+                  isLight ? "text-white" : "text-[#0F172A]"
                 )}
                 style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
               >
-                MCCC
+                Acs Films
               </span>
             </Link>
 
@@ -67,14 +74,14 @@ export default function Navbar() {
                     to={link.href}
                     className={({ isActive }) =>
                       cn(
-                        'px-4 py-2 rounded-full text-sm font-medium transition-all duration-200',
+                        "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
                         isActive
                           ? isLight
-                            ? 'bg-white/20 text-white'
-                            : 'bg-violet-50 text-[#7C3AED]'
+                            ? "bg-white/20 text-white"
+                            : "bg-violet-50 text-[#7C3AED]"
                           : isLight
-                            ? 'text-white/80 hover:text-white hover:bg-white/10'
-                            : 'text-slate-600 hover:text-[#0F172A] hover:bg-slate-50'
+                          ? "text-white/80 hover:text-white hover:bg-white/10"
+                          : "text-slate-600 hover:text-[#0F172A] hover:bg-slate-50"
                       )
                     }
                   >
@@ -90,21 +97,27 @@ export default function Navbar() {
                 variant="primary"
                 size="sm"
                 className="hidden md:inline-flex"
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => (window.location.href = "/contact")}
               >
                 Contact Us
               </Button>
 
               <button
-                aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
                 aria-expanded={mobileOpen}
                 onClick={() => setMobileOpen((o) => !o)}
                 className={cn(
-                  'md:hidden p-2 rounded-full transition-colors',
-                  isLight ? 'text-white hover:bg-white/10' : 'text-slate-700 hover:bg-slate-100'
+                  "md:hidden p-2 rounded-full transition-colors",
+                  isLight
+                    ? "text-white hover:bg-white/10"
+                    : "text-slate-700 hover:bg-slate-100"
                 )}
               >
-                {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {mobileOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
@@ -130,10 +143,10 @@ export default function Navbar() {
                       to={link.href}
                       className={({ isActive }) =>
                         cn(
-                          'block px-4 py-3 rounded-xl text-base font-medium transition-colors',
+                          "block px-4 py-3 rounded-xl text-base font-medium transition-colors",
                           isActive
-                            ? 'bg-violet-50 text-[#7C3AED]'
-                            : 'text-slate-700 hover:bg-slate-50 hover:text-[#0F172A]'
+                            ? "bg-violet-50 text-[#7C3AED]"
+                            : "text-slate-700 hover:bg-slate-50 hover:text-[#0F172A]"
                         )
                       }
                     >
@@ -155,5 +168,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }

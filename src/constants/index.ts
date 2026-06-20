@@ -1,9 +1,9 @@
 import type { NavLink, Stat, Program } from '@/types'
 
-export const SITE_NAME = 'MCCC'
+export const SITE_NAME = 'Acs Films'
 export const SITE_FULL_NAME = 'Mukesh Chhabra Casting Company'
 export const SITE_TAGLINE = 'Your Gateway To The Big Screen'
-export const SITE_EMAIL = 'hello@mccc.in'
+export const SITE_EMAIL = 'hello@acsfilms.in'
 export const SITE_PHONE = '+91 98765 43210'
 export const SITE_ADDRESS = 'Mumbai, Maharashtra, India'
 

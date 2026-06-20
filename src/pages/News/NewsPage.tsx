@@ -52,7 +52,7 @@ export default function NewsPage() {
     <>
       <PageHeader
         title="News & Updates"
-        subtitle="The latest from MCCC — casting announcements, workshop news, and industry stories."
+        subtitle="The latest from Acs Films — casting announcements, workshop news, and industry stories."
         breadcrumbs={[{ label: 'News' }]}
       />
 
@@ -60,7 +60,7 @@ export default function NewsPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <SectionHeader
             eyebrow="Latest"
-            title="What's Happening at MCCC"
+            title="What's Happening at Acs Films"
             className="mb-10"
           />
           <motion.div
